@@ -1,2 +1,2 @@
 # Webseite
-Hier erstelle ich meine Webseite
+Hier erstelle ich meine eigene Webseite.
