@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hallo</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
   </head>
 <?php
