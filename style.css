@@ -1,9 +1,18 @@
+:root {
+  --akzentfarbe: rgba(0, 255, 0,1);
+}
 body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
     background: url(bg.jpg);
     background-size: cover;
     font-family: sans-serif;
+}
+#particles-js{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 255, 255, 1), rgba(0, 0, 255, 1));
 }
 .loginBox{
     position: absolute;
@@ -19,7 +28,7 @@ body{
 .loginBox h2{
     margin: 0;
     padding: 0 0 20px;
-    color: #efed40;
+    color: var(--akzentfarbe);
     text-align: center;
 }
 p.errorLOL{
@@ -49,6 +58,7 @@ p.errorLOL{
     color: rgba(255,255,255,.8);
 }
 .loginBox input[type="submit"]{
+  font-weight: bold;
     border: none;
     outline: none;
     height: 40px;
@@ -59,7 +69,7 @@ p.errorLOL{
     border-radius: 20px;
 }
 .loginBox input[type="submit"]:hover{
-    background: #efed40;
+    background: var(--akzentfarbe);
     color: #262626;
 }
 .loginBox a{

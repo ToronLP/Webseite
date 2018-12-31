@@ -18,6 +18,9 @@
   }
 ?>
   <body>
+    <div id="particles-js">
+
+    </div>
     <div class="loginbox">
       <h2>Login</h2>
       <form method="post" action="">
@@ -38,5 +41,7 @@
         <input type="submit">
       </form>
     </div>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
