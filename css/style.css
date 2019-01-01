@@ -5,7 +5,6 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: url(bg.jpg);
     background-size: cover;
     font-family: sans-serif;
 }
@@ -30,10 +29,6 @@ body{
     padding: 0 0 20px;
     color: var(--akzentfarbe);
     text-align: center;
-}
-p.errorLOL{
-  font-size: 13px;
-  font-weight: lighter!important;
 }
 .loginBox p{
     margin: 0;
@@ -83,4 +78,40 @@ p.errorLOL{
 }
 .loginBox a.register{
     float: right;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.userBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 80%;
+    padding: 40px 40px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.5);
+}
+.userBox h2{
+    margin: 0;
+    padding: 0 0 20px;
+    color: var(--akzentfarbe);
+    text-align: center;
+}
+.userBox a.loginFail{
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 30.5%;
+  padding-right: 30.5%;
+}
+.userBox a.noData{
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 43%;
+  padding-right: 43%;
 }
