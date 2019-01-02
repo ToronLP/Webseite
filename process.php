@@ -4,6 +4,7 @@
     $con = mysqli_connect("localhost", "root", "");
     // Get values passed fro from in login.php file
     $username = $_POST['username'];
+    $passUntouched = $_POST['password'];
     $password = sha1($_POST['password']);
     // check for connection
     if($con != null){
@@ -12,8 +13,6 @@
       $password = stripcslashes($password);
       $username = mysqli_real_escape_string($con, $username);
       $password = mysqli_real_escape_string($con, $password);
-      // hash the $password
-      $pwHash = sha1($password);
       // select database
       mysqli_select_db($con, "websitelogin");
 
@@ -40,26 +39,30 @@
       <h2>Willkommen <?php echo $row['username'];?></h2>
       <?php
         if($row['su']==1){
-          function newUser() {
+          if(isset($_POST['newusername']) && isset($_POST['newpassword'])) {
               // get the user atributes
-              $username = 'newusername';
-              $password = 'newpassword';
+              $newusername = $_POST['newusername'];
+              $newpassword = $_POST['newpassword'];
               // create the connection
               $con = mysqli_connect("localhost", "root", "");
               // check for connection
               if($con != null){
-                $username = stripcslashes($username);
-                $password = stripcslashes($password);
-                $username = mysqli_real_escape_string($con, $username);
-                $password = mysqli_real_escape_string($con, $password);
+                $newusername = stripcslashes($newusername);
+                $newpassword = stripcslashes($newpassword);
+                $newusername = mysqli_real_escape_string($con, $newusername);
+                $newpassword = mysqli_real_escape_string($con, $newpassword);
 
                 // select database
                 mysqli_select_db($con, "websitelogin");
-                $pwHash = sha1($password);
+                $newpwHash = sha1($newpassword);
                 // hash the password
-
+                if(isset($_POST['superuser'])){
+                  $su=1;
+                }else{
+                  $su=0;
+                }
                 // Insert the new data int the database
-                $sql = "INSERT INTO users VALUES(null,'$username','$pwHash','$su')";
+                $sql = "INSERT INTO users VALUES(null,'$newusername','$newpwHash','$su')";
                 mysqli_query($con, $sql);
               }
 
@@ -67,13 +70,16 @@
       ?>
       <div class="newUserBox">
         <h3>Create a new User</h3>
-        <form method="post" action='<?php newUser()?>'>
+        <form method="post">
+          <input type="hidden" name="username" value='<?php echo $username?>'>
+          <input type="hidden" name="password" value='<?php echo $passUntouched?>'>
           <p>Benutzername</p>
           <input type="text" name="newusername" placeholder="Benutzername">
           <p>Passwort</p>
           <input type="password" name="newpassword" placeholder="Passwort">
           <p>Superuser
           <input type="checkbox" name="superuser"></p>
+
           <input type="submit">
         </form>
       </div>
