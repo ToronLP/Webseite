@@ -104,8 +104,7 @@ body{
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
-  padding-left: 30.5%;
-  padding-right: 30.5%;
+  padding-left: 22%;
 }
 .userBox a.noData{
   color: #fff;
@@ -114,4 +113,66 @@ body{
   text-decoration: none;
   padding-left: 43%;
   padding-right: 43%;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.newUserBox{
+  float: right;
+  width: 33%;
+}
+.newUserBox h2{
+  margin: 0;
+  padding: 0 0 20px;
+  color: var(--akzentfarbe);
+  text-align: center;
+}
+.newUserBox p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+}
+.newUserBox input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.newUserBox input[type="text"], .newUserBox input[type="password"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+::placeholder{
+  color: rgba(255,255,255,.8);
+}
+.newUserBox input[type="checkbox"]{
+  background: black;
+  width: 5%;
+  float: right;
+  cursor: pointer;
+}
+.newUserBox input[type="submit"]{
+  font-weight: bold;
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  background: #ff267e;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.newUserBox input[type="submit"]:hover{
+  background: var(--akzentfarbe);
+  color: #262626;
+}
+.newUserBox h3{
+  margin: 0;
+  padding: 0 0 20px;
+  color: var(--akzentfarbe);
+  text-align: center;
 }

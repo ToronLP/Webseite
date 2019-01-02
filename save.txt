@@ -1,0 +1,23 @@
+if(isset($_POST['regUsername']) && isset($_POST['regPassword'])){
+  // get the user atributes
+  $username = $_POST['regUsername'];
+  $password = $_POST['regPassword'];
+  // create the connection
+  $con = mysqli_connect("localhost", "root", "");
+  // check for connection
+  if($con != null){
+    $username = stripcslashes($username);
+    $password = stripcslashes($password);
+    $username = mysqli_real_escape_string($con, $username);
+    $password = mysqli_real_escape_string($con, $password);
+
+    // select database
+    mysqli_select_db($con, "websitelogin");
+    $pwHash = sha1($password);
+    // hash the password
+
+    // Insert the new data int the database
+    $sql = "INSERT INTO users VALUES(null,'$username','$pwHash','$su')";
+    mysqli_query($con, $sql);
+  }
+}
