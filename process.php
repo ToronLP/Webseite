@@ -36,7 +36,7 @@
       if(isset($_POST['username']) && isset($_POST['password'])){
         if($row['username'] == $username && $row['password'] == $password){
       ?>
-      <h2>Willkommen <?php echo $row['username'];?></h2>
+      <h2>Willkommen <?php echo $row['username'];?>!</h2>
       <?php
         if($row['su']==1){
           if(isset($_POST['newusername']) && isset($_POST['newpassword'])) {
@@ -79,7 +79,6 @@
           <input type="password" name="newpassword" placeholder="Passwort">
           <p>Superuser
           <input type="checkbox" name="superuser"></p>
-
           <input type="submit">
         </form>
       </div>
@@ -87,7 +86,7 @@
 
         }
       ?>
-      <a href="login.php">Abmelden</a>
+      <a href="login.php" class="abmelden">Abmelden</a>
       <?php
         }else{
       ?>

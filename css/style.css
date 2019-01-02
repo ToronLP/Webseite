@@ -115,6 +115,13 @@ body{
   padding-right: 43%;
 }
 
+.userBox a.abmelden{
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /*----------------------------------------------------------------------------*/
 
 .newUserBox{
