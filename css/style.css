@@ -1,6 +1,7 @@
 :root {
-  --mainfarbe: rgba(238,238,238,1);
-  --akzentfarbe: rgba(255,255,0,1);
+  --mainbuttonfarbe: rgba(183,0,255,1);
+  --mainbuttonhoverfarbe: rgba(245,0,255,1);
+  --akzentfarbe: rgba(0,255,0,1);
 }
 body{
     margin: 0;
@@ -12,7 +13,7 @@ body{
 #particles-js{
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to left top, rgba(0,255,0, 1) 0%, rgba(0,0,255,1)/*rgba(35,58,119, 1)*/ 100%);
+  background: linear-gradient(to bottom, rgba(0,255,255, 1) 0%, rgba(0,0,255,1)/*rgba(35,58,119, 1)*/ 100%);
 }
 .loginBox{
     position: absolute;
@@ -60,12 +61,12 @@ body{
     height: 40px;
     color: #fff;
     font-size: 16px;
-    background: var(--mainfarbe);
+    background: var(--mainbuttonfarbe);
     cursor: pointer;
     border-radius: 20px;
 }
 .loginBox input[type="submit"]:hover{
-    background: var(--akzentfarbe);
+    background: var(--mainbuttonhoverfarbe);
     color: #262626;
 }
 .loginBox a{
@@ -154,12 +155,12 @@ body{
     height: 40px;
     color: #fff;
     font-size: 16px;
-    background: var(--mainfarbe);
+    background: var(--mainbuttonfarbe);
     cursor: pointer;
     border-radius: 20px;
 }
 .newUserBox input[type="submit"]:hover{
-    background: var(--akzentfarbe);
+    background: var(--mainbuttonhoverfarbe);
     color: #262626;
 }
 #logoff{
@@ -179,7 +180,7 @@ body{
 .newUserBox h3{
     margin: 0;
     padding: 0 0 20px;
-    color: #43ef40;
+    color: var(--akzentfarbe);
     text-align: center;
 }
 .newUserBox.active{
@@ -192,14 +193,14 @@ body{
     left: 50%;
     width: 80px;
     height: 80px;
-    background: var(--mainfarbe);
+    background: var(--mainbuttonfarbe);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .newUserBox .toggle:hover{
-    background: var(--akzentfarbe);
+    background: var(--mainbuttonhoverfarbe);
 }
 .newUserBox .toggle::before{
     content: '';
@@ -228,7 +229,7 @@ body{
   padding-bottom: 15px!important;
 }
 .newUserBox .su input[type="checkbox"]{
-  align: right;
+  float: right;
 }
 .place1{
     position: fixed;
@@ -244,7 +245,7 @@ body{
 .place1 h3{
     margin: 0;
     padding: 0 0 20px;
-    color: #43ef40;
+    color: var(--akzentfarbe);
     text-align: center;
 }
 .place1.active{
@@ -257,14 +258,14 @@ body{
     left: 50%;
     width: 80px;
     height: 80px;
-    background: var(--mainfarbe);
+    background: var(--mainbuttonfarbe);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .place1 .toggle:hover{
-    background: var(--akzentfarbe);
+    background: var(--mainbuttonhoverfarbe);
 }
 .place1 .toggle::before{
     content: '';
@@ -296,7 +297,7 @@ body{
 .place2 h3{
     margin: 0;
     padding: 0 0 20px;
-    color: #43ef40;
+    color: var(--akzentfarbe);
     text-align: center;
 }
 .place2.active{
@@ -309,14 +310,14 @@ body{
     left: 50%;
     width: 80px;
     height: 80px;
-    background: var(--mainfarbe);
+    background: var(--mainbuttonfarbe);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .place2 .toggle:hover{
-    background: var(--akzentfarbe);
+    background: var(--mainbuttonhoverfarbe);
 }
 .place2 .toggle::before{
     content: '';
