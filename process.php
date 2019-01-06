@@ -112,14 +112,25 @@
         <h3>Create a new User</h3>
         <div class="toggle" onclick="toggle_place1()"></div>
       </div>
-      <div class="place2" id="place2">
-        <h3>Create a new User</h3>
-        <div class="toggle" onclick="toggle_place2()"></div>
-      </div>
-    <?php
+      <?php
+        }
       }
-    }
-    ?>
+      ?>
+      <div class="place2" id="place2">
+        <h3>Change your settings</h3>
+        <div class="toggle" onclick="toggle_place2()"></div>
+        <form method="post">
+          <input type="hidden" name="username" value='<?php echo $username?>'>
+          <input type="hidden" name="password" value='<?php echo $passUntouched?>'>
+          <p>Benutzername</p>
+          <input type="text" name="" placeholder="Benutzername">
+          <p>Passwort</p>
+          <input type="password" name="newpassword" placeholder="Passwort">
+          <p class="su">Superuser
+          <input type="checkbox" name="superuser"></p>
+          <input type="submit">
+        </form>
+      </div>
     <script>
       function toggle_UserBox() {
         var newUserBox = document.getElementById('newUserBox');
