@@ -57,10 +57,11 @@
       </style>
       <h2>Noting here!</h2>
       <a href="login.php" class="noData">Einloggen?</a>
-    </div>
+
     <?php
       }
     ?>
+    </div>
     <?php
     if(isset($_POST['username']) && isset($_POST['password'])){
       if($row['su']==1){
@@ -94,7 +95,7 @@
       ?>
       <div class="newUserBox" id="newUserBox">
         <h3>Create a new User</h3>
-        <div class="toggle" onclick="toggle_div()"></div>
+        <div class="toggle" onclick="toggle_UserBox()"></div>
         <form method="post">
           <input type="hidden" name="username" value='<?php echo $username?>'>
           <input type="hidden" name="password" value='<?php echo $passUntouched?>'>
@@ -102,19 +103,35 @@
           <input type="text" name="newusername" placeholder="Benutzername">
           <p>Passwort</p>
           <input type="password" name="newpassword" placeholder="Passwort">
-          <p>Superuser
+          <p class="su">Superuser
           <input type="checkbox" name="superuser"></p>
           <input type="submit">
         </form>
+      </div>
+      <div class="place1" id="place1">
+        <h3>Create a new User</h3>
+        <div class="toggle" onclick="toggle_place1()"></div>
+      </div>
+      <div class="place2" id="place2">
+        <h3>Create a new User</h3>
+        <div class="toggle" onclick="toggle_place2()"></div>
       </div>
     <?php
       }
     }
     ?>
     <script>
-      function toggle_div() {
+      function toggle_UserBox() {
         var newUserBox = document.getElementById('newUserBox');
         newUserBox.classList.toggle('active');
+      }
+      function toggle_place1() {
+        var place1 = document.getElementById('place1');
+        place1.classList.toggle('active');
+      }
+      function toggle_place2() {
+        var place2 = document.getElementById('place2');
+        place2.classList.toggle('active');
       }
     </script>
     <script type="text/javascript" src="javascript/particles.js"></script>
