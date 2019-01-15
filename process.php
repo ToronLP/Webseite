@@ -109,25 +109,30 @@
         </form>
       </div>
       <div class="place1" id="place1">
-        <h3>Create a new User</h3>
+        <h3>Change the Design</h3>
         <div class="toggle" onclick="toggle_place1()"></div>
+        <form>
+          <select class="test" name="theme">
+            <option value="dark">
+              Dark
+            </option>
+          </select>
+        </form>
       </div>
       <?php
         }
       }
       ?>
-      <div class="place2" id="place2">
+      <div class="changeSettingsBox" id="changeSettingsBox">
         <h3>Change your settings</h3>
-        <div class="toggle" onclick="toggle_place2()"></div>
+        <div class="toggle" onclick="toggle_changeSettingsBox()"></div>
         <form method="post">
           <input type="hidden" name="username" value='<?php echo $username?>'>
           <input type="hidden" name="password" value='<?php echo $passUntouched?>'>
           <p>Benutzername</p>
-          <input type="text" name="" placeholder="Benutzername">
+          <input type="text" name="replaceusername" placeholder="Benutzername">
           <p>Passwort</p>
-          <input type="password" name="newpassword" placeholder="Passwort">
-          <p class="su">Superuser
-          <input type="checkbox" name="superuser"></p>
+          <input type="password" name="replacepassword" placeholder="Passwort">
           <input type="submit">
         </form>
       </div>
@@ -140,9 +145,9 @@
         var place1 = document.getElementById('place1');
         place1.classList.toggle('active');
       }
-      function toggle_place2() {
-        var place2 = document.getElementById('place2');
-        place2.classList.toggle('active');
+      function toggle_changeSettingsBox() {
+        var changeSettingsBox = document.getElementById('changeSettingsBox');
+        changeSettingsBox.classList.toggle('active');
       }
     </script>
     <script type="text/javascript" src="javascript/particles.js"></script>

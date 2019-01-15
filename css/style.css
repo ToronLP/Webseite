@@ -283,7 +283,7 @@ body{
     transform: rotate(315deg);
     top: 10px;
 }
-.place2{
+.changeSettingsBox{
     position: fixed;
     left: 35%;
     top: -75%;
@@ -294,16 +294,16 @@ body{
     padding: 40px 40px;
     box-sizing: border-box;
 }
-.place2 h3{
+.changeSettingsBox h3{
     margin: 0;
     padding: 0 0 20px;
     color: var(--akzentfarbe);
     text-align: center;
 }
-.place2.active{
+.changeSettingsBox.active{
     top: 0;
 }
-.place2 .toggle{
+.changeSettingsBox .toggle{
     position: absolute;
     top: 100%;
     transform: translateX(-50%);
@@ -316,10 +316,10 @@ body{
     justify-content: center;
     align-items: center;
 }
-.place2 .toggle:hover{
+.changeSettingsBox .toggle:hover{
     background: var(--mainbuttonhoverfarbe);
 }
-.place2 .toggle::before{
+.changeSettingsBox .toggle::before{
     content: '';
     position: relative;
     left: 1px;
@@ -331,67 +331,46 @@ body{
     transform: rotate(135deg);
     transition: 0.5s;
 }
-.place2.active .toggle::before{
+.changeSettingsBox.active .toggle::before{
     transform: rotate(315deg);
     top: 10px;
 }
-/*
-.newUserBox{
-  float: right;
-  width: 33%;
+.changeSettingsBox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
 }
-.newUserBox h2{
-  margin: 0;
-  padding: 0 0 20px;
-  color: var(--akzentfarbe);
-  text-align: center;
+.changeSettingsBox form{
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+    padding: 40px;
+    padding-bottom: 20px;
 }
-.newUserBox p{
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  color: #fff;
+.changeSettingsBox input[type="text"], .changeSettingsBox input[type="password"]{
+    border:  none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 16px;
 }
-.newUserBox input{
-  width: 100%;
-  margin-bottom: 20px;
+.changeSettingsBox input[type="submit"]{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background: var(--mainbuttonfarbe);
+    cursor: pointer;
+    border-radius: 20px;
 }
-.newUserBox input[type="text"], .newUserBox input[type="password"]{
-  border: none;
-  border-bottom: 1px solid #fff;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  color: #fff;
-  font-size: 16px;
+.changeSettingsBox input[type="submit"]:hover{
+    background: var(--mainbuttonhoverfarbe);
+    color: #262626;
 }
-::placeholder{
-  color: rgba(255,255,255,.8);
-}
-.newUserBox input[type="checkbox"]{
-  background: black;
-  width: 5%;
-  float: right;
-  cursor: pointer;
-}
-.newUserBox input[type="submit"]{
-  font-weight: bold;
-  border: none;
-  outline: none;
-  height: 40px;
-  color: #fff;
-  font-size: 16px;
-  background: #ff267e;
-  cursor: pointer;
-  border-radius: 20px;
-}
-.newUserBox input[type="submit"]:hover{
-  background: var(--akzentfarbe);
-  color: #262626;
-}
-.newUserBox h3{
-  margin: 0;
-  padding: 0 0 20px;
-  color: var(--akzentfarbe);
-  text-align: center;
-}*/
